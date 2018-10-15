@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<h1>This is a test of a basic JavaScript arrays</h1>
+<table>
+	<tr><th>Head1</th><th>Head2</th></tr>
+	<tr><td>d1</td><td>d2</td></tr>
+</table>
+<script type="text/javascript">
+	var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+	alert("There are "+days.length+" days in the array.");
+
+	var allTableTDs = document.getElementsByTagName('td');
+	alert("There are "+allTableTDs.length+" TDs in this page.");
+
+	days[10] = "11Day";
+	days.push("PushDay");
+	
+	for (var i=0;i<days.length;i++) {
+		alert("Day #"+i+" ="+days[i]);
+	}
+
+	// 4/20/18 testing the pop method, page 13 in lab docs
+	var lastDayInArray = days.pop();
+	alert("last day in array = "+lastDayInArray);
+	alert("All done!");
+</script>
+</body>
+</html>

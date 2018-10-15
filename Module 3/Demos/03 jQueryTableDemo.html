@@ -1,0 +1,35 @@
+
+<table class="generalinfo">
+  <tr><td>This is the first table</td></tr>
+</table>
+<table class="products">
+  <tr><td>This is the second table</td></tr>
+</table>
+<table class="vendorinfo">
+  <tr><td>This is the third table - row 1</td></tr>
+  <tr><td>This is the third table - row 2</td></tr>
+  <tr><td>This is the third table - row 3</td></tr>
+</table>
+<table class="products">
+  <tr><td>This is the fourth table</td></tr>
+</table>
+
+<script src="http://ajax.microsoft.com/ajax/jquery/jquery-3.2.1.min.js" 
+type="text/javascript"></script>
+
+<script>
+alert(  $.type($("table").css("border","solid red 2px").filter(".products").css( "background", "lightgray" ))  );
+alert(0)
+
+
+$("table").each( function( i, val ) { alert( "Table " + i + " has this classname: " + val.className ) });  
+
+var tables = document.getElementsByTagName("TABLE")
+for (i=0;i<tables.length;i++)
+{
+  alert( "Table " + i + " has this classname: " + tables[i].className );
+}
+
+
+
+</script>
