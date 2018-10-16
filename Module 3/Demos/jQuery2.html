@@ -1,6 +1,7 @@
 <html>
 <head>
 <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" 
+
 type="text/javascript"></script>
 </head>
 <body>
@@ -13,7 +14,7 @@ type="text/javascript"></script>
 
   // This line will return 2 it waits for the DOM 
   // to be fully loaded.
-  $( document ).ready( {
+  $( document ).ready(function() {
     alert($("div").length);
   })
 </script>
