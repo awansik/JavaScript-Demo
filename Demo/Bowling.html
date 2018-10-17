@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bowling Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function fillArraySumAndAvg() {
+            // commenting out b/c using jQuery 
+            // var framesCtrl = getRefById('frames');
+            // var sumCtrl = getRefById('sum');
+            // var avgCtrl = getRefById('avg');
+
+            var scores = [];
+
+            //build frames array w/ 10 random # btw 0 and 10
+            var sum = 0;
+            for (var idx=0; idx < 10; idx++) {
+                let s = getRandomNumber();
+                scores.push(s);
+                sum += s;
+            }
+            var avg = sum / scores.length;
+            console.log(scores, sum, avg);
+
+            // framesCtrl.textContent = scores.join();
+            // sumCtrl.value = sum;
+            // avgCtrl.value = avg;
+            $('#frames').text(scores);
+            $('#sum').val(sum);
+            $('#avg').val(avg);
+        }
+
+        //generate random # btw 0 and 10
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 11);
+        }
+
+        function getRefById(id) {
+            return document.getElementById(id);
+        }
+    </script>
+</head>
+<body>
+    <h1>Bowling Demo App</h1>
+
+    <h2>Frames</h2>
+    <p id='frames'>
+        The frames array goes here!
+    </p>
+    <p>Sum: <input type='text' id='sum'></p>
+    <p>Avg: <input type='text' id='avg'></p>
+    <button onclick='fillArraySumAndAvg()'>Let's Bowl!</button>
+</body>
+</html>
