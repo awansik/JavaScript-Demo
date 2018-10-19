@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        table,th,td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+    </style>
+    <title>Table of Powers</title>
+    <script>
+        function createTOP() {
+            console.log("createTOP fired");
+            let nbr = $("#userInt").val();
+    
+            let tableBody = "";
+            for (let i=1; i <= nbr; i++) {
+                let squared = i*i;
+                let cubed = squared*i;
+                let powRow = "<tr><td>"+i+"</td><td>"+squared+
+                            "</td><td>"+cubed+"</td></tr>";
+                tableBody += powRow;
+            }
+            $("#powRows").append(tableBody);
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>Welcome to the Squares and Cubes Table</h2>
+    <div>
+        <label for="userInt">Enter an integer: </label>
+        <input type="text" id="userInt" name="userInt">
+    </div>
+    <div>
+        <button type="submit" onclick="createTOP()">OK</button>
+    </div>
+    <div>
+        <table id="top">
+            <thead>
+                <td>Number</td>
+                <td>Squared</td>
+                <td>Cubed</td>
+            </thead>
+            <tbody id="powRows">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
