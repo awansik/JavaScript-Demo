@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grade Converter App</title>
+</head>
+<body>
+    <script>
+        var ng = prompt("Welcome to the Letter Grade Converter!" +"\n" +"\n"
+        +"Enter numerical grade: ")
+        if (ng<=0||ng>=100) {
+            alert("Error, number must be between 1-100")
+            ng = prompt("Welcome to the Letter Grade Converter!" +"\n" +"\n"
+             +"Enter numerical grade: ")
+        } else if (ng<=59) {
+            var lg = "F";
+        } else if (ng<=69) {
+            lg = "D";
+        } else if (ng<=79) {
+            lg = "C";
+        } else if (ng<=89) {
+            lg = "B"
+        } else {
+            lg = "A";
+        }
+        alert("Letter grade: "+lg)
+        </script>
+</body>
+</html>
