@@ -7,7 +7,7 @@
     <script>
         var ng = prompt("Welcome to the Letter Grade Converter!" +"\n" +"\n"
         +"Enter numerical grade: ")
-        if (ng<=0||ng>=100) {
+        if (ng<0||ng>100) {
             alert("Error, number must be between 1-100")
             ng = prompt("Welcome to the Letter Grade Converter!" +"\n" +"\n"
              +"Enter numerical grade: ")
